@@ -28,7 +28,7 @@ setTimeout(() => {
 
       // se pregunta si desea continuar sin bloquer la impresion de los datos
       continuar = await new Promise((resolve) =>
-        setTimeout(() => resolve(confirm("Deseas Continuar? ")), 0)
+        setTimeout(() => resolve(confirm("Deseas Continuar? ")), 500)
       );
     }
     // Mensaje de despedida
