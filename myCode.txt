@@ -1,0 +1,10 @@
+// const nombre = prompt("Ingresa Tu Nombre: ");
+  // const apellido = prompt("Ingresa Tu Apellido: ");
+  // const edad = Number(prompt("Ingresa tu Edad: "));
+  // let mensaje =
+  //   edad < 18
+  //     ? "No tienes permitida la entrada!"
+  //     : edad === 18
+  //     ? "Puedes Ingresar solo Por 2 Horas"
+  //     : "Puedes Ingresar Tranquilamente !";
+  // alert(`${nombre} ${apellido} \npor tener ${edad} años, \n${mensaje}`);
