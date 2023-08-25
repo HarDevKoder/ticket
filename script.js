@@ -1,19 +1,24 @@
 // Función para retrasar carga del script
 setTimeout(() => {
+  
+  // Función que valida la información ingresada por el usuario
+  function validarEntrada(mensaje, validacion) {
+    let entrada = prompt(mensaje);
+    while (!validacion(entrada)) {
+      entrada = prompt("Entrada no válida!\n" + mensaje);
+    }
+    return entrada;
+  }
+
   // Funcion asincrona para ejecucion continua y mostrar resultados
   async function solicitarDatos() {
     let mensajes = ["Prohibido!", "2 Horas", "Indefinido"];
     let continuar = true;
-    while (continuar) {
-      // Solicitud de datos
-      let nombre = prompt("Ingresa tu Nombre: ");
-      let apellido = prompt("Ingresa tu Apellido: ");
-      let edad = prompt("Ingresa tu edad: ");
 
-      // Valido edad
-      while (isNaN(edad) || edad.trim() === "") {
-        edad = prompt("Edad no Válida!\nIngresa Tu Edad de nuevo: ");
-      }
+    while (continuar) {
+      let nombre = validarEntrada("Ingresa tu Nombre: ",(entrada) => entrada.trim() !== "");
+      let apellido = validarEntrada("Ingresa tu Apellido: ", (entrada) => entrada.trim() !== "");
+      let edad = validarEntrada("Ingresa tu edad: ", (entrada) => !isNaN(entrada) && entrada.trim() !== "");
 
       // Convierto edad en numero
       edad = Number(edad);
