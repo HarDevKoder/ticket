@@ -12,8 +12,16 @@ body{
   padding: 0px 10px 10px 10px;
   box-shadow: 1px 2px 1px .5px black;
   margin: 0 auto;
+  background: blanchedalmond;
 }
 
 .titulo{
   text-align: center;
+}
+
+.datos{
+  width:fit-content;
+  padding: 10px;
+  margin: 0 auto;
+  margin-top: -20px;
 }
